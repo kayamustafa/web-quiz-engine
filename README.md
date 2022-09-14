@@ -110,7 +110,7 @@ To solve a quiz, you need to pass an answer(JSON-array) with option indexes via 
 Here is an example with curl:
 ```
 curl --user test@mail.com:password -X POST -H "Content-Type: application/json" 
-http://localhost:8889/api/quizzes/1/solve -d "[1, 2]"
+http://localhost:8889/api/quizzes/1/solve -d "{"answer": [1, 2]}"
 ```
 
 The result is determined by the value of the boolean success key in the response json.
