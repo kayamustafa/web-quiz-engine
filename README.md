@@ -34,8 +34,8 @@ The service returns 200, if the registration has been completed successfully.
 If the email is already taken by another user, the service will return `HTTP 400`
 
 Here are some additional restrictions to the format of user credentials:
-- an email must have a valid format (with @ and .);
-- password must have at least five characters.
+- an email must have a valid format (with @ and .)
+- password must have at least five characters
 
 If any of them are not satisfied, the service will also return `HTTP 400`
 
