@@ -92,7 +92,7 @@ The response contains a JSON with quizzes (inside content) and some additional m
   {"id":202,"title":"The Java Logo","text":"What is depicted on the Java logo?","options":["Robot","Tea leaf","Cup of coffee","Bug"]}]
 }
 ```
-We can also pass the page and pageSize parameter to navigate through pages /api/quizzes?page=1&pageSize=3. Pages start from 0 (the first page).
+We can also pass the page and pageSize parameter to navigate through pages (e.g., `/api/quizzes?page=1&pageSize=3`). Pages start from 0 (the first page).
 
 If there is no quizzes, content is empty.
 
