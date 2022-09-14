@@ -69,7 +69,7 @@ To get an info about a quiz, you need to specify its id in url.
 curl --user test@gmail.com:password -X GET http://localhost:8889/api/quizzes/1
 ```
 The response does not contain answer:
-```
+```JSON
 {"id":1,"title":"The Java Logo","text":"What is depicted on the Java logo?","options":["Robot","Tea leaf","Cup of coffee","Bug"]}
 ```
 If the quiz does not exist, the server returns `HTTP 404`
