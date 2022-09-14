@@ -12,6 +12,10 @@ An embedded H2 database has been used to store all data in the file system.
 ````
 java -jar build/libs/*.jar
 ````
+- Without building a JAR file
+````
+./gradlew bootRun
+````
 By default, app runs on the port `8889`
 
 ## Description
