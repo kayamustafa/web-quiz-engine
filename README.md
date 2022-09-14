@@ -31,7 +31,7 @@ The following are examples of all supported requests and responses using 'curl'
 To register a new user, you need to send a JSON with email and password via `POST` request. Here is an example:
 ```
 curl -X POST -H "Content-Type: application/json" http://localhost:8889/api/register
--d "{\"email\":\"test@gmail.com\", \"password\": \"password\"}" // '\' to escape double quotes
+-d "{\"email\":\"test@mail.com\", \"password\": \"password\"}" // '\' to escape double quotes
 ```
 The service returns `200`, if the registration has been completed successfully.
 
@@ -55,7 +55,7 @@ To create a new quiz, you need to send a JSON via `POST` request with the follow
 - answer: an array of indexes of correct options, it's optional since all options can be wrong.
 
 ```
-curl --user test@gmail.com:password -X POST -H "Content-Type: application/json"
+curl --user test@mail.com:password -X POST -H "Content-Type: application/json"
 -d "{\"title":"The Java Logo", "text":"What is depicted on the Java logo?", "options": ["Robot", "Tea leaf", "Cup of coffee", "Bug"], "answer": [2]}"
 http://localhost:8889/api/quizzes
 ```
@@ -70,7 +70,7 @@ If the request JSON does not contain title or text, or they are empty strings ("
 ## Get a quiz
 To get an info about a quiz, you need to specify its id in url.
 ```
-curl --user test@gmail.com:password -X GET http://localhost:8889/api/quizzes/1
+curl --user test@mail.com:password -X GET http://localhost:8889/api/quizzes/1
 ```
 The response does not contain answer:
 ```JSON
@@ -83,7 +83,7 @@ If the quiz does not exist, the server returns `HTTP 404`
 ## Get all quizzes (with paging)
 Here is an example:
 ```
-curl --user test@gmail.com:password -X GET http://localhost:8889/api/quizzes
+curl --user test@mail.com:password -X GET http://localhost:8889/api/quizzes
 ```
 The response contains a JSON with quizzes (inside content) and some additional metadata:
 ```JSON
@@ -109,7 +109,7 @@ To solve a quiz, you need to pass an answer(JSON-array) with option indexes via 
 
 Here is an example with curl:
 ```
-curl --user test@gmail.com:password -X POST -H "Content-Type: application/json" 
+curl --user test@mail.com:password -X POST -H "Content-Type: application/json" 
 http://localhost:8889/api/quizzes/1/solve -d "[1, 2]"
 ```
 
@@ -130,7 +130,7 @@ The result is determined by the value of the boolean success key in the response
 It is possible to return completion history of the user.
 Example with curl:
 ```
-curl --user test@gmail.com:password -X GET  http://localhost:8889/api/quizzes/completed
+curl --user test@mail.com:password -X GET  http://localhost:8889/api/quizzes/completed
 ```
 The response contains a JSON with quizzes (inside content) and some additional metadata:
 ```JSON
@@ -150,7 +150,7 @@ The response contains a JSON with quizzes (inside content) and some additional m
 ## Deleting a quiz
 It is possible to delete a quiz, but this can only be done by its creator.
 ```
-curl --user test@gmail.com:password -X DELETE  http://localhost:8889/api/quizzes/1
+curl --user test@mail.com:password -X DELETE  http://localhost:8889/api/quizzes/1
 ```
 If the operation was successful, the service returns `HTTP 204` (No content).
 
