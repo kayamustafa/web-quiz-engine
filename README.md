@@ -101,7 +101,7 @@ In all cases, the status code is HTTP 200 (OK).
 ---
 
 ## Solving a quiz
-To solve a quiz, you need to pass an answer(array) with option indexes via POST request.
+To solve a quiz, you need to pass an answer(JSON-array) with option indexes via POST request.
 
 Here is an example with curl:
 ```
