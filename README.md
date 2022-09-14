@@ -123,7 +123,7 @@ The result is determined by the value of the boolean success key in the response
 ---
 
 ## Get completion history (with paging)
-It is possible to return completion history of the user
+It is possible to return completion history of the user.
 Example with curl:
 ```
 curl --user test@gmail.com:password -X GET  http://localhost:8889/api/quizzes/completed
