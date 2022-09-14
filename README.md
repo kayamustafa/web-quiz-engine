@@ -22,7 +22,7 @@ By default, app runs on the port `8889`
 the API supports creating, getting, solving quizzes, registering users and getting completion history. Each quiz has an id, title, text, some options. Some of the options are correct (from 0 to all). The answer is not returned in the API.
 
 ## Operations
-To perform any actions with quizzes a user has to be registered and then authorized via HTTP Basic Auth. Otherwise, the service returns the HTTP 401 (Unauthorized) code.
+To perform any actions with quizzes a user has to be registered and then authorized via HTTP Basic Auth. Otherwise, the service returns the `HTTP 401` (Unauthorized) code.
 The following are examples of all supported requests and responses using 'curl'
 
 ---
@@ -33,7 +33,7 @@ To register a new user, you need to send a JSON with email and password via `POS
 curl -X POST -H "Content-Type: application/json" http://localhost:8889/api/register
 -d "{\"email\":\"test@gmail.com\", \"password\": \"password\"}" // '\' to escape double quotes
 ```
-The service returns 200, if the registration has been completed successfully.
+The service returns `200`, if the registration has been completed successfully.
 
 If the email is already taken by another user, the service will return `HTTP 400`
 
@@ -63,7 +63,7 @@ The response contains the same JSON with generated id, but does not include answ
 ```JSON
 {"id":1,"title":"The Java Logo","text":"What is depicted on the Java logo?","options":["Robot","Tea leaf","Cup of coffee","Bug"]}
 ```
-If the request JSON does not contain title or text, or they are empty strings (""), then the response is 404. If the number of options in the quiz is less than 2, the response is 404 as well.
+If the request JSON does not contain title or text, or they are empty strings (""), then the response is `404`. If the number of options in the quiz is less than 2, the response is `404` as well.
 
 ---
 
@@ -100,12 +100,12 @@ We can also pass the page and pageSize parameter to navigate through pages (e.g.
 
 If there is no quizzes, content is empty.
 
-In all cases, the status code is HTTP 200 (OK).
+In all cases, the status code is `HTTP 200` (OK).
 
 ---
 
 ## Solving a quiz
-To solve a quiz, you need to pass an answer(JSON-array) with option indexes via POST request.
+To solve a quiz, you need to pass an answer(JSON-array) with option indexes via `POST` request.
 
 Here is an example with curl:
 ```
