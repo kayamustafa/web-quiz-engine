@@ -130,7 +130,7 @@ The result is determined by the value of the boolean success key in the response
 It is possible to return completion history of the user.
 Example with curl:
 ```
-curl --user test@mail.com:password -X GET  http://localhost:8889/api/quizzes/completed
+curl --user test@mail.com:password -X GET  http://localhost:8889/api/completed
 ```
 The response contains a JSON with quizzes (inside content) and some additional metadata:
 ```JSON
